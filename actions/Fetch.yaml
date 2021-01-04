@@ -11,4 +11,24 @@ parameters:
     description: username twitter
     required: true
     position: 1
+  consumer_key:
+    type: string
+    description: token1
+    required: true
+    position: 2
+  consumer_secret:
+     type: string
+     description: token2
+     required: true
+     position: 3
+  access_key:
+     type: string
+     description: token3
+     required: true
+     position: 4
+  access_secret:
+     type: string
+     description: token4
+     required: true
+     position: 5     
   
