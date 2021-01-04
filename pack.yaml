@@ -8,6 +8,6 @@ keywords:
   - social networks
 version: 0.0.1
 python_versions:
-  - "3"
+  - "3.7.7"
 author : Ved
 email : ved.prakash@nihilent.com
