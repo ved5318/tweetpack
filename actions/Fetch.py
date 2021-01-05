@@ -7,7 +7,7 @@ access_key= ""
 access_secret = ""
 username = ""
 #user_id=786601883691515904
- 
+text = ""
 '''consumer_key = "AyeMkToNVdtICkcXSynim0ASn"
 consumer_secret = "ec4ffvb8SLaC79U080hyqWR0oqxWmcNM7iollCuoTrikIfhIbs"
 access_key= "786601883691515904-ujfS8pA1yvVm7pNpjNL5qM31JaXnZGq"

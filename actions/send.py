@@ -1,6 +1,7 @@
 import tweepy
 import json
 import requests
+import Fetch.py
 from st2common.runners.base_action import Action
 
 consumer_key = ""
@@ -21,19 +22,20 @@ api = tweepy.API(auth,wait_on_rate_limit=True)
 username = "@vedprakash531"'''
 class Myaction(Action):
 
-    def run(self, username, consumer_key, consumer_secret, access_key, access_secret):
-        auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+    def run(self):
+        url = "https://hooks.slack.com/services/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"
+        payload = {"text": text }
+        r = requests.post(url, data=json.dumps(payload))
+        print(r.text)
+        return(True, r.text)
+        '''auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
         auth.set_access_token(access_key, access_secret)
         api = tweepy.API(auth,wait_on_rate_limit=True)
         for Tweet in api.user_timeline(username):
             text = str(Tweet.text.encode("utf-8"))
             if "Stackstorm" not in text:
-                continue
-            url = "https://hooks.slack.com/services/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"
-            payload = {"text": text }
-            r = requests.post(url, data=json.dumps(payload))
-            print(r.text)
-            return(True, r.text)
+                continue'''    
+            
 #print(run(username))
 '''def notify_slack(text):
   url = "https://hooks.slack.com/services/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"
