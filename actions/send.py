@@ -4,11 +4,11 @@ import requests
 import Fetch.py
 from st2common.runners.base_action import Action
 
-consumer_key = ""
+'''consumer_key = ""
 consumer_secret = ""
 access_key= ""
 access_secret = ""
-username = ""
+username = ""'''
 
 '''consumer_key = "AyeMkToNVdtICkcXSynim0ASn"
 consumer_secret = "ec4ffvb8SLaC79U080hyqWR0oqxWmcNM7iollCuoTrikIfhIbs"
