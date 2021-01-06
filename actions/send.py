@@ -7,7 +7,7 @@ from st2common.runners.base_action import Action
 username = "@vedprakash531"
 class Myaction(Action):
 
-    def run(self):
+    def run(self, username):
         url = "https://hooks.slack.com/services/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"
         payload = {"text": text }
         r = requests.post(url, data=json.dumps(payload))
