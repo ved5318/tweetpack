@@ -6,7 +6,7 @@ description: fetch tweet
 enabled: true
 entry_point: send.py
 parameters:
-  username:
+  text:
     type: string
     description: username twitter
     required: true
