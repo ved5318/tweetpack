@@ -3,11 +3,10 @@ import json
 import requests
 from Fetch import text
 from st2common.runners.base_action import Action
-message = text
 
 class Myaction(Action):
 
-    def run(self, message):
+    def run(self, text):
         url = "https://hooks.slack.com/services/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"
         payload = {"text": text }
         r = requests.post(url, data=json.dumps(payload))
