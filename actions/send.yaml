@@ -5,9 +5,3 @@ runner_type: "python-script"
 description: fetch tweet
 enabled: true
 entry_point: send.py
-parameters:
-  text:
-    type: string
-    description: username twitter
-    required: true
-    position: 1
