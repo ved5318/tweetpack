@@ -1,7 +1,7 @@
 import tweepy
 import json
 import requests
-import Fetch.py
+from Fetch import text
 from st2common.runners.base_action import Action
 
 '''consumer_key = ""
