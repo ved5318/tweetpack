@@ -24,7 +24,7 @@ class GeTweet(Action):
         #         continue
         #     print(text)    
         #     return (True, text)
-        return (True,API)    
+        return (True,api)    
     '''tweets = api.user_timeline(username)
     for tweet in api.search(q="Stackstorm", lang="en", rpp=10):
         return(tweet.text.encode("utf-8"))'''
