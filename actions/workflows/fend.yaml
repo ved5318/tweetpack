@@ -30,8 +30,6 @@ tasks:
       - when: <% succeeded() %>
         publish:
           - result: "{{ result() }}"
-        '''do:
-          - send_tweets'''
       - when: <% failed() %>
         publish:
           - result: "{{ result() }}"
