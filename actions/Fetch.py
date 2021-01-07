@@ -1,13 +1,11 @@
 import tweepy
 from st2common.runners.base_action import Action
+from lib import get_tweets
 
-consumer_key = ""
-consumer_secret = ""
-access_key= ""
-access_secret = ""
-username = ""
-#user_id=786601883691515904
-text = ""
+__all__ = [
+    'GeTweet'
+]
+
 '''consumer_key = "AyeMkToNVdtICkcXSynim0ASn"
 consumer_secret = "ec4ffvb8SLaC79U080hyqWR0oqxWmcNM7iollCuoTrikIfhIbs"
 access_key= "786601883691515904-ujfS8pA1yvVm7pNpjNL5qM31JaXnZGq"
@@ -17,7 +15,7 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_key, access_secret)
 api = tweepy.API(auth,wait_on_rate_limit=True)
 '''
-class Myaction(Action):
+class GeTweet(get_tweets.GetTweets):
 
     def run(self, username, consumer_key, consumer_secret, access_key, access_secret):
         auth = tweepy.OAuthHandler(consumer_key, consumer_secret)

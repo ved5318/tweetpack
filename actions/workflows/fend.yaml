@@ -12,7 +12,7 @@ input:
 
 vars:
   - result: ''
-
+  - error: ''
 tasks:    
 
 
@@ -31,12 +31,12 @@ tasks:
         publish:
           - result: "{{ result() }}"
         do:
-          - done
+          - send_tweets
       - when: <% failed() %>
         publish:
           - result: "{{ result() }}"
         do:
-          - failed 
+          - finish_failed 
   send_tweets:
     action: tweetpack.send
     input:
@@ -47,11 +47,16 @@ tasks:
       - when: <% succeeded() %>
         publish:
           - result: "{{ result() }}"
-        do:
-          - done
       - when: <% failed() %>
         publish:
           - result: "{{ result() }}"
         do:
-          - failed 
+          - finish_failed 
+  finish_failed:
+    action: core.echo
+    input:
+      message: "failed"    
+  output:
+  - result: '{{ ctx().result }}'
+  - error: '{{ ctx().error }}'         
   
