@@ -7,7 +7,7 @@ __all__ = [
     'SeTweet'
 ]
 
-class SeTweet():
+class SeTweet:
 
     def run(self, text):
         url = "https://hooks.slack.com/services/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"
