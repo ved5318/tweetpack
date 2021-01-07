@@ -31,8 +31,4 @@ parameters:
      description: token4
      required: true
      position: 5     
-  text:
-     type: string
-     description: tweet text
-     required: true
-     position: 6        
+         

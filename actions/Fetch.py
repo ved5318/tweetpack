@@ -1,6 +1,5 @@
 import tweepy
 from st2common.runners.base_action import Action
-from lib import get_tweets
 
 __all__ = [
     'GeTweet'
@@ -15,7 +14,7 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_key, access_secret)
 api = tweepy.API(auth,wait_on_rate_limit=True)
 '''
-class GeTweet(get_tweets.GetTweets):
+class GeTweet():
 
     def run(self, username, consumer_key, consumer_secret, access_key, access_secret):
         auth = tweepy.OAuthHandler(consumer_key, consumer_secret)

@@ -2,12 +2,12 @@ import tweepy
 import json
 import requests
 from st2common.runners.base_action import Action
-from lib import send_tweets
 
 __all__ = [
     'SeTweet'
 ]
-class SeTweet(send_tweets.SendTweet):
+
+class SeTweet():
 
     def run(self, text):
         url = "https://hooks.slack.com/services/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"

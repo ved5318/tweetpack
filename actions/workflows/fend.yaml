@@ -8,7 +8,7 @@ input:
   - consumer_secret
   - access_key
   - access_secret
-  - text
+  
 
 vars:
   - result: ''
