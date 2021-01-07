@@ -21,12 +21,12 @@ class GeTweet(Action):
         auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
         auth.set_access_token(access_key, access_secret)
         api = tweepy.API(auth,wait_on_rate_limit=True)
-        '''for Tweet in api.user_timeline(username):
-            text = str(Tweet.text.encode("utf-8"))
-            if "Stackstorm" not in text:
-                continue
-            print(text)    
-            return (True, text)'''
+        # for Tweet in api.user_timeline(username):
+        #     text = str(Tweet.text.encode("utf-8"))
+        #     if "Stackstorm" not in text:
+        #         continue
+        #     print(text)    
+        #     return (True, text)
         return (True,API)    
     '''tweets = api.user_timeline(username)
     for tweet in api.search(q="Stackstorm", lang="en", rpp=10):
