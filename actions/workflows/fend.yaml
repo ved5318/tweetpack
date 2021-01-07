@@ -35,7 +35,7 @@ tasks:
           - result: "{{ result() }}"
         do:
           - finish_failed 
-  send_tweets:
+  '''send_tweets:
     action: tweetpack.send
     input:
       text: <% task(get_tweets).result.result%>
@@ -49,7 +49,7 @@ tasks:
         publish:
           - result: "{{ result() }}"
         do:
-          - finish_failed 
+          - finish_failed '''
   finish_failed:
     action: core.echo
     input:
