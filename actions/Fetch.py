@@ -1,9 +1,6 @@
 import tweepy
 from st2common.runners.base_action import Action
 
-__all__ = [
-    'GeTweet'
-]
 
 '''consumer_key = "AyeMkToNVdtICkcXSynim0ASn"
 consumer_secret = "ec4ffvb8SLaC79U080hyqWR0oqxWmcNM7iollCuoTrikIfhIbs"
