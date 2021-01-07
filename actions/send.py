@@ -3,11 +3,11 @@ import json
 import requests
 from st2common.runners.base_action import Action
 
-__all__ = [
+'''__all__ = [
     'SeTweet'
-]
+]'''
 
-class SeTweet:
+class Myaction(Action):
 
     def run(self, text):
         url = "https://hooks.slack.com/services/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"
