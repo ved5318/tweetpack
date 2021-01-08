@@ -6,4 +6,4 @@ class MyAction(Action):
     def run(self, a, b):
         c = a + b
         print(c)
-        return {"result": c}
+        return {"result": str(c)}
