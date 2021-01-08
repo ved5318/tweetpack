@@ -1,0 +1,17 @@
+name: add
+pack: tweetpack
+runner_type: "python-script"
+description: fetch tweet
+enabled: true
+entry_point: add.py
+parameters:
+  a:
+    type: integer
+    description: add
+    required: true
+    position: 1
+  b:
+    type: integer
+    description: add
+    required: true
+    position: 2

@@ -5,6 +5,16 @@ description: fetch tweet and send it to slack
 runner_type: orquesta
 entry_point: workflows/fend.yaml
 enabled: true
-
+parameters:
+  a:
+    type: integer
+    description: add
+    required: true
+    position: 1
+  b:
+    type: integer
+    description: add
+    required: true
+    position: 2
   
          

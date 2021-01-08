@@ -3,7 +3,8 @@ version: 1.0
 description: A Workflow to create ubuntu vm using template.
 
 input:
- 
+ - a
+ - b
   
 
 vars:
@@ -15,7 +16,8 @@ tasks:
   add:
     action: tweetpack.add
     input:
-      
+      a: <% ctx().a%>
+      b: <% ctx().b %>
       timeout: 3600
     next:
       - when: <% succeeded() %>
