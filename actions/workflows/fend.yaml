@@ -30,3 +30,5 @@ tasks:
    action: core.echo
    input:
       message: "Workflow: Passed"      
+ output:
+  - result: <% ctx(result) %>     
