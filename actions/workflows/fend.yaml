@@ -23,6 +23,4 @@ tasks:
       - when: <% succeeded() %>
         publish:
           - result: "{{ result().result }}"
-  output:
-  - result: '{{ ctx().result }}'
   
