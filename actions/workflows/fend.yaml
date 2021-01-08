@@ -30,15 +30,6 @@ tasks:
       - when: <% succeeded() %>
         publish:
           - result: "{{ result() }}"
-      - when: <% failed() %>
-        publish:
-          - result: "{{ result() }}"
-        do:
-          - finish_failed 
-  finish_failed:
-    action: core.echo
-    input:
-      message: "failed"    
   output:
   - result: '{{ ctx().result }}'
   - error: '{{ ctx().error }}'         
