@@ -22,5 +22,5 @@ tasks:
     next:
       - when: <% succeeded() %>
         publish:
-          - result: "{{ result().result }}"
+          - result_outputs: "{{ result().result.result }}"
   
