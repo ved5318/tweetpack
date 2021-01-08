@@ -1,5 +1,5 @@
 ---
-name: fetch and send
+name: fetch_and_send
 pack: tweetpack
 description: fetch tweet and send it to slack
 runner_type: orquesta

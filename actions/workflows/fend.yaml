@@ -16,7 +16,7 @@ tasks:
   add:
     action: tweetpack.add
     input:
-      a: <% ctx().a%>
+      a: <% ctx().a %>
       b: <% ctx().b %>
       timeout: 3600
     next:
