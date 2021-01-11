@@ -16,7 +16,7 @@ vars:
 tasks:    
 
 
-  add:
+  fetch:
     action: tweetpack.fetch
     input:
       username: <% ctx().username %>
@@ -30,8 +30,18 @@ tasks:
         publish:
           - result: "{{ result() }}"
         do:
-          - finish_succeeded
-
+          - send
+  send:
+     action: tweetpack.send
+     input:
+       text: <% task(fetch).result.result %> 
+       timeout: 3600
+     next:
+      - when: <% succeeded() %>
+        publish:
+          - result: "{{ result() }}"
+        do:
+          - finish_succeeded 
   finish_succeeded:
    action: core.echo
    input:
