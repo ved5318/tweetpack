@@ -3,8 +3,11 @@ version: 1.0
 description: A Workflow to create ubuntu vm using template.
 
 input:
- - a
- - b
+ - username
+ - consumer_key
+ - consumer_secret
+ - access_key
+ - access_secret
   
 
 vars:
@@ -14,10 +17,13 @@ tasks:
 
 
   add:
-    action: tweetpack.add
+    action: tweetpack.fetch
     input:
-      a: <% ctx().a %>
-      b: <% ctx().b %>
+      username: <% ctx().username %>
+      consumer_key: <% ctx().consumer_key %>
+      consumer_secret: <% ctx().consumer_secret %>
+      access_key: <% ctx().access_key %>
+      access_secret: <% ctx().access_secret %>
       timeout: 3600
     next:
       - when: <% succeeded() %>

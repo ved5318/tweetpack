@@ -6,15 +6,29 @@ runner_type: orquesta
 entry_point: workflows/fend.yaml
 enabled: true
 parameters:
-  a:
-    type: integer
-    description: add
+  username:
+    type: string
+    description: username twitter
     required: true
     position: 1
-  b:
-    type: integer
-    description: add
+  consumer_key:
+    type: string
+    description: token1
     required: true
     position: 2
-  
+  consumer_secret:
+     type: string
+     description: token2
+     required: true
+     position: 3
+  access_key:
+     type: string
+     description: token3
+     required: true
+     position: 4
+  access_secret:
+     type: string
+     description: token4
+     required: true
+     position: 5   
          
