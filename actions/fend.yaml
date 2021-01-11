@@ -16,19 +16,23 @@ parameters:
     description: token1
     required: true
     position: 2
+    secret: true
   consumer_secret:
      type: string
      description: token2
      required: true
      position: 3
+     secret: true
   access_key:
      type: string
      description: token3
      required: true
      position: 4
+     secret: true
   access_secret:
      type: string
      description: token4
      required: true
-     position: 5   
+     position: 5
+     secret: true   
          
