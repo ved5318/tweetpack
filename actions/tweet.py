@@ -1,7 +1,7 @@
 import tweepy 
 from st2common.runners.base_action import Action
 
-class GeTweet(Action):
+class seTweet(Action):
 
     def run(self, message, username, consumer_key, consumer_secret, access_key, access_secret):
         auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
