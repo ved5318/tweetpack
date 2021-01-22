@@ -1,8 +1,8 @@
 ---
-name: fetch
+name: tweet
 pack: tweetpack
 runner_type: "python-script"
-description: fetch tweet
+description: tweet
 enabled: true
 entry_point: tweet.py
 parameters:
