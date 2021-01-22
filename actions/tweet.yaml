@@ -1,10 +1,10 @@
 ---
-name: fetch_and_send
+name: fetch
 pack: tweetpack
-description: fetch tweet and send it to slack
-runner_type: orquesta
-entry_point: workflows/fend.yaml
+runner_type: "python-script"
+description: fetch tweet
 enabled: true
+entry_point: Fetch.py
 parameters:
   username:
     type: string
@@ -41,4 +41,3 @@ parameters:
      position: 6
      secret: true     
     
-         
