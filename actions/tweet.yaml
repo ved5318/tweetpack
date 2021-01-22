@@ -4,7 +4,7 @@ pack: tweetpack
 runner_type: "python-script"
 description: fetch tweet
 enabled: true
-entry_point: Fetch.py
+entry_point: tweet.py
 parameters:
   username:
     type: string
