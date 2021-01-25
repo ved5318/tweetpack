@@ -19,7 +19,7 @@ parameters:
   passwd:
     type: string
     description: password
-    required: true
+    required: False
     position: 3
     secret: true
   dbname:
