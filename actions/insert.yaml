@@ -1,8 +1,8 @@
 ---
-name: tweet
+name: insertdb
 pack: tweetpack
 runner_type: "python-script"
-description: tweet
+description: insertdb
 enabled: true
 entry_point: insert.py
 parameters:
