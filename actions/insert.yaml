@@ -1,0 +1,30 @@
+---
+name: tweet
+pack: tweetpack
+runner_type: "python-script"
+description: tweet
+enabled: true
+entry_point: insert.py
+parameters:
+  hostname:
+    type: string
+    description: hostname
+    required: true
+    position: 1
+  username:
+    type: string  
+    description: username of host
+    required: true
+    position: 2
+  passwd:
+    type: string
+    description: password
+    required: true
+    position: 3
+    secret: true
+  dbname:
+     type: string
+     description: database name
+     required: true
+     position: 4
+  
