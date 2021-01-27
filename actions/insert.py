@@ -16,3 +16,5 @@ class insertdb(Action):
         mycursor.execute(sql, val)
         mydb.commit()
         return True
+
+   
