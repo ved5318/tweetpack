@@ -6,7 +6,7 @@ description: fetch tweet
 enabled: true
 entry_point: followers.py
 parameters:
-  username:
+  screen_name:
     type: string
     description: username twitter
     required: true
