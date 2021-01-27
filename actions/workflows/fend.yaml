@@ -1,6 +1,6 @@
 version: 1.0
 
-description: A Workflow to create ubuntu vm using template.
+description: A Workflow to tweet fetch and send to slack.
 
 input:
  - username
@@ -58,10 +58,26 @@ tasks:
         publish:
           - result: "{{ result() }}"
         do:
-          - finish_succeeded 
+          - followers
+  followers:
+    action: tweetpack.followers
+    input:
+      screen_name: <% ctx().username %>
+      consumer_key: <% ctx().consumer_key %>
+      consumer_secret: <% ctx().consumer_secret %>
+      access_key: <% ctx().access_key %>
+      access_secret: <% ctx().access_secret %>
+      timeout: 3600
+    next:
+      - when: <% succeeded() %>
+        publish:
+          - result: "{{ result() }}"
+        do:
+          - finish_succeeded        
   finish_succeeded:
    action: core.echo
    input:
-      message: "Workflow: Passed"      
+      message: "Workflow: Passed" 
+           
 output:
   - result: <% ctx(result) %>      
