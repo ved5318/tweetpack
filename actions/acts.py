@@ -1,4 +1,4 @@
-from lib.action import St2BaseAction
+from lib.actions import St2BaseAction
 from lib.formatters import format_client_list_result
 
 __all__ = [
