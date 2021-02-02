@@ -74,7 +74,7 @@ tasks:
           - result: "{{ result() }}"
         do:
           - saction
-  saction:
+  sactions:
      action: tweetpack.acts
      input:
        timeout: 3600
