@@ -73,7 +73,17 @@ tasks:
         publish:
           - result: "{{ result() }}"
         do:
-          - finish_succeeded        
+          - saction
+  saction:
+     action: tweetpack.acts
+     input:
+       timeout: 3600
+     next:
+      - when: <% succeeded() %>
+        publish:
+          - result: "{{ result() }}"
+        do:
+          - finish_succeeded            
   finish_succeeded:
    action: core.echo
    input:
